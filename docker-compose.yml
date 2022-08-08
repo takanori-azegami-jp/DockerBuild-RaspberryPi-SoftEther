@@ -17,10 +17,6 @@ services:
     volumes:
       # configファイル
       - ./conf/vpn_server.config:/usr/vpnserver/vpn_server.config
-    environment:
-      - USERS=azx213:Azx2001978!
-      - PSK=azx213
-      - SPW=Azx2001978!
 volumes:
   softether-vpn:
     driver: local
