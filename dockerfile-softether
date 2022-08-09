@@ -25,12 +25,13 @@ RUN yum -y update \
 FROM  almalinux:9.0
 
 COPY --from=build /artifacts.zip /
-COPY copyables  /
+
+COPY ./entrypoint.sh  /
 
 RUN yum -y update \
     && yum -y install unzip iptables \
     && rm -rf /var/log/* /var/cache/yum/* /var/lib/yum/* \
-    && chmod +x /entrypoint.sh /gencert.sh \
+    && chmod +x /entrypoint.sh \
     && unzip -o /artifacts.zip -d / \
     && rm /artifacts.zip \
     && rm -rf /opt \

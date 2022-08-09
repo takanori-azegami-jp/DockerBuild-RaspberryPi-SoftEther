@@ -10,4 +10,12 @@ then
   # exit -1
 fi
 
+
+# set daily cron
+cat <<EOL > /etc/cron.daily/deleteVpnServerLog.sh
+#!/bin/sh
+find /usr/vpnserver/*_log '*.log' -mtime +30 -delete
+EOL
+
+
 exec "$@"
