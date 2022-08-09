@@ -26,7 +26,7 @@ FROM  almalinux:9.0
 
 COPY --from=build /artifacts.zip /
 
-COPY ./entrypoint.sh  /
+COPY entrypoint.sh  /
 
 RUN yum -y update \
     && yum -y install unzip iptables \
