@@ -8,7 +8,6 @@ RaspberryPi(64bit)にDockerでSoftEtherをVPN環境を構築
 ## 変更点
 - 設定は「softEther VPN サーバー管理マネージャ」をインストールして行う<br>
   ※docker buildする度に「DDNS」が変更するので注意
-  変更したくない場合は
 - 内部ポート：5555のみ
 - 外部ポート：500、4500
 - 30日より古いログはcron.dailyのシェルで日次で削除
@@ -36,8 +35,8 @@ $ docker-compose down --rmi all --volumes --remove-orphans
 
 ## 参考サイト
 - [siomiz/softethervpn](https://github.com/siomiz/SoftEtherVPN)
+- [`siomiz/softethervpn` を利用して SoftEther server を構築した際に、DDNS設定が上書きされる](https://zenn.dev/rhene/scraps/a71de99611ca97)
 - [Alpine Linuxにvpnを入れる](https://saturday-in-the-park.netlify.app/AlpineLinux/07_vpn/)
-
 
 ## ライセンス
 - [MITライセンス](https://licenses.opensource.jp/MIT/MIT.html)
