@@ -5,6 +5,13 @@ RaspberryPi(64bit)にDockerでSoftEtherを構築
 - kernel：Linux ホスト名 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
 - OS：Debian GNU/Linux 11 (bullseye)
 
+## 変更点
+- 設定は「softEther VPN サーバー管理マネージャ」をインストールして行う
+  ※docker buildをする度に再設定が必要（DDNSも変わる）
+- 内部ポート：5555のみ
+- 外部ポート：500、4500
+- 30日より古いログはcron.dailyのシェルで日次で削除
+
 ## Dockerコマンド
 ```bash
 # Docker-compose実行
@@ -19,6 +26,9 @@ $ docker images
 # Docker コンテナの中に入る
 $ docker exec -it [コンテナID] bash
 
+# dokcer-composeのリビルド
+$ docker-compose up -d --build  --force-recreate
+
 # dokcer-composeの一括削除（滅びの呪文）
 $ docker-compose down --rmi all --volumes --remove-orphans
 ```
@@ -30,4 +40,3 @@ $ docker-compose down --rmi all --volumes --remove-orphans
 
 ## ライセンス
 - [MITライセンス](https://licenses.opensource.jp/MIT/MIT.html)
-
