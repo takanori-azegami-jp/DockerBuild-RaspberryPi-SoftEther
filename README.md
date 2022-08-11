@@ -1,4 +1,4 @@
-# DockerBuild-RaspberryPi-SoftEther_my
+# DockerBuild-RaspberryPi-SoftEther
 RaspberryPi(64bit)にDockerでSoftEtherを構築
 
 ## 環境
