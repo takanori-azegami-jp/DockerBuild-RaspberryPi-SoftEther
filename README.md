@@ -35,7 +35,6 @@ $ docker-compose down --rmi all --volumes --remove-orphans
 
 ## 参考サイト
 - [siomiz/softethervpn](https://github.com/siomiz/SoftEtherVPN)
-- [`siomiz/softethervpn` を利用して SoftEther server を構築した際に、DDNS設定が上書きされる](https://zenn.dev/rhene/scraps/a71de99611ca97)
 - [Alpine Linuxにvpnを入れる](https://saturday-in-the-park.netlify.app/AlpineLinux/07_vpn/)
 
 ## ライセンス
