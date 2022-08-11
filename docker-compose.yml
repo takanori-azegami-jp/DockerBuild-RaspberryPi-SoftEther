@@ -7,6 +7,7 @@ services:
     container_name: softether-vpn
     environment:
       TZ: Asia/Tokyo
+    # hostname: <your_vpnserver_hostname> ※docker buildの都度にDDNSを変更したくない場合設定する
     restart: always
     cap_add:
       - NET_ADMIN
