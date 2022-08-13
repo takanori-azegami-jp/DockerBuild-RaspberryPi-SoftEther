@@ -6,7 +6,7 @@ RaspberryPi(64bit)にDockerでSoftEtherをVPN環境を構築
 - OS：Debian GNU/Linux 11 (bullseye)
 
 ## 変更点
-- 設定は「[softEther VPN サーバー管理マネージャ](https://ja.softether.org/4-docs/1-manual/2/2.4)」をインストールして行う<br>
+- VPNの設定は「[softEther VPN サーバー管理マネージャ](https://ja.softether.org/4-docs/1-manual/2/2.4)」をインストールして行う<br>
   ※docker buildする度に「DDNS」が変更するので注意
 - 内部ポート：5555のみ
 - 外部ポート：500、4500
