@@ -1,13 +1,13 @@
-FROM alpine:3.15.5 as  prep
+FROM alpine:3.16 as prep
 
-ENV BUILD_VERSION=v4.38-9760-rtm
+ENV BUILD_VERSION=v4.41-9782-beta
 
 RUN wget https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/archive/refs/tags/${BUILD_VERSION}.tar.gz \
     && mkdir -p /usr/local/src \
     && tar -x -C /usr/local/src/ -f ${BUILD_VERSION}.tar.gz \
     && rm ${BUILD_VERSION}.tar.gz
 
-FROM almalinux:9.0 as build
+FROM almalinux:9.1 as build
 
 COPY --from=prep /usr/local/src /usr/local/src
 
@@ -21,7 +21,7 @@ RUN dnf -y update \
     && touch /usr/vpnserver/vpn_server.config \
     && zip -r9 /artifacts.zip /usr/vpn* /usr/bin/vpn*
 
-FROM  almalinux:9.0
+FROM  almalinux:9.1
 
 COPY --from=build /artifacts.zip /
 
