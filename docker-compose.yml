@@ -3,7 +3,7 @@ services:
   softether-vpn:
     build:
       context: ./
-      dockerfile: dockerfile-debian
+      dockerfile: Dockerfile
     container_name: softether-vpn
     environment:
       TZ: Asia/Tokyo
