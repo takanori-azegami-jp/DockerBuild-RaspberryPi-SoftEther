@@ -2,8 +2,11 @@
 RaspberryPi(64bit)にDockerでSoftEtherをVPN環境を構築
 
 ## 環境
+[VPNサーバ]
 - kernel：Linux ホスト名 5.15.32-v8+ #1538 SMP PREEMPT Thu Mar 31 19:40:39 BST 2022 aarch64 GNU/Linux
 - OS：Debian GNU/Linux 11 (bullseye)
+[マネージャー]
+- OS：Windwso11 Pro
 
 ## 変更点
 - VPNの設定は「[softEther VPN サーバー管理マネージャ](https://ja.softether.org/4-docs/1-manual/2/2.4)」をインストールして行う<br>
